@@ -41,6 +41,10 @@ export default function Hero() {
       </div>
       <div className="hero-photo">
         <img src="/jairo-cutout.png" alt="Jairo Lance" />
+        <span className="orb" aria-hidden="true" />
+        {["Swift", "Kotlin", "React Native", "Flutter", "BLE"].map((t, i) => (
+          <span key={t} className={`float-chip fc${i + 1}`} aria-hidden="true">{t}</span>
+        ))}
       </div>
       <svg className="wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
         <path d="M0,70 C300,10 700,130 1440,30 L1440,120 L0,120 Z" fill="#fafaff" />

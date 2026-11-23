@@ -30,10 +30,19 @@ export default function Animations() {
       t.style.setProperty("--mx", `${e.clientX - r.left}px`);
       t.style.setProperty("--my", `${e.clientY - r.top}px`);
     };
+    const hero = document.querySelector(".hero");
+    const tilt = (e) => {
+      if (!hero) return;
+      const r = hero.getBoundingClientRect();
+      hero.style.setProperty("--px", ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
+      hero.style.setProperty("--py", ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
+    };
+    document.addEventListener("pointermove", tilt);
     document.addEventListener("pointermove", move);
     return () => {
       io.disconnect();
       document.removeEventListener("pointermove", move);
+      document.removeEventListener("pointermove", tilt);
     };
   }, []);
   return null;

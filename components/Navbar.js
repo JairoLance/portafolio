@@ -1,9 +1,10 @@
 const links = [
   ["Inicio", "#inicio"],
   ["Sobre mí", "#sobre-mi"],
-  ["Servicios", "#servicios"],
+  ["Experiencia", "#experiencia"],
+  ["Skills", "#skills"],
   ["Proyectos", "#proyectos"],
-  ["Testimonios", "#testimonios"],
+  ["Formación", "#formacion"],
 ];
 
 export default function Navbar() {

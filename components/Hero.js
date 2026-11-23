@@ -1,4 +1,14 @@
-const socials = ["GH", "in", "X", "IG", "▶"];
+const socials = [
+  ["GH", "https://github.com/JairoLance", "GitHub"],
+  ["in", "https://www.linkedin.com/in/jairo-luis-torres-lance-a1a503200", "LinkedIn"],
+  ["@", "mailto:ingtorres1986@gmail.com", "Correo"],
+];
+
+const stats = [
+  ["iOS + Android", "SDK nativo"],
+  ["Full Stack", "Web & servidores"],
+  ["Híbrido", "React Native · Flutter"],
+];
 
 export default function Hero() {
   return (
@@ -6,24 +16,30 @@ export default function Hero() {
       <div className="hero-text">
         <p className="hi">¡Hola! Soy</p>
         <h1>Jairo Lance 👋</h1>
-        <h2>Desarrollador de Software</h2>
+        <h2>Senior Mobile SDK Engineer</h2>
+        <p className="role">iOS &amp; Android · Fintech | Full Stack Web</p>
         <p className="lead">
-          Construyo aplicaciones web y de software modernas, escalables y bien
-          diseñadas. Apasionado por el código limpio y las soluciones que
-          resuelven problemas reales.
+          Experiencia de punta a punta: desde el servidor y la base de datos
+          hasta el SDK en el teléfono del usuario. He trabajado con Debrain (Brooklyn, NY) y lidero el SDK móvil nativo de
+          Milio, que otras empresas integran en sus apps iOS, Android y React
+          Native para transferencias internacionales y pagos con tarjeta.
         </p>
         <div className="socials">
-          {socials.map((s) => (
-            <a key={s} href="#contacto" aria-label={s}>{s}</a>
+          {socials.map(([s, href, label]) => (
+            <a key={s} href={href} aria-label={label} target="_blank" rel="noreferrer">{s}</a>
           ))}
         </div>
         <div className="actions">
-          <a href="#" className="btn">Descargar CV</a>
-          <a href="#contacto" className="link">Hablemos ↗</a>
+          <a href="#contacto" className="btn">Hablemos</a>
+          <a href="#proyectos" className="link">Ver proyectos ↗</a>
         </div>
+        <ul className="stats">
+          {stats.map(([a, b]) => (
+            <li key={a}><strong>{a}</strong><span>{b}</span></li>
+          ))}
+        </ul>
       </div>
       <div className="hero-photo">
-        {/* Coloca tu foto en public/jairo-cutout.png */}
         <img src="/jairo-cutout.png" alt="Jairo Lance" />
       </div>
       <svg className="wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
@@ -32,7 +48,4 @@ export default function Hero() {
     </section>
   );
 }
-
-
-
 

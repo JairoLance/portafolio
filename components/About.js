@@ -1,25 +1,27 @@
 const skills = [
-  ["Frontend (React / Next.js)", 93, "#8b7cf6"],
-  ["Backend (Node.js)", 90, "#5fae92"],
-  ["Bases de datos", 87, "#f5c97b"],
-  ["DevOps / Cloud", 75, "#e5534b"],
+  ["Mobile nativo (Swift / Kotlin)", 95, "#8b7cf6"],
+  ["React Native / Flutter", 90, "#3b82f6"],
+  ["SDKs y distribución", 92, "#5fae92"],
+  ["Full Stack Web (Next.js / NestJS)", 88, "#f5c97b"],
+  ["Infraestructura Linux", 82, "#e5534b"],
 ];
 
 export default function About() {
   return (
     <section id="sobre-mi" className="about">
       <div className="about-photo">
-        {/* Coloca tu foto en public/jairo-cutout.png */}
         <img className="body" src="/jairo-cutout.png" alt="Jairo Lance" />
         <img className="head" src="/jairo-cutout.png" alt="" aria-hidden="true" />
       </div>
       <div className="about-text">
         <p className="eyebrow left">Sobre mí</p>
-        <h2>¿Por qué contratarme para tu próximo proyecto?</h2>
+        <h2>Del servidor al SDK en el teléfono del usuario</h2>
         <p className="muted">
-          Soy desarrollador de software y me encanta adquirir nuevas
-          experiencias y aprender de lo que me rodea. Pronto añadiré aquí mis
-          proyectos y experiencia profesional.
+          Soy Jairo Luis Torres Lance, ingeniero en Montería, Colombia, y
+          trabajo de forma remota. Lidero el SDK móvil nativo de Milio (fintech
+          de pagos y transferencias internacionales), con sólida experiencia en lenguajes híbridos (React Native y Flutter), incluyendo integración de sensores y sistemas Bluetooth, integrado por otras
+          empresas en apps iOS, Android y React Native. Además tengo una sólida
+          trayectoria full stack web y en administración de servidores Linux.
         </p>
         <div className="skills">
           {skills.map(([name, pct, color]) => (
@@ -31,11 +33,8 @@ export default function About() {
             </div>
           ))}
         </div>
-        <a href="#contacto" id="contacto" className="btn">Contrátame</a>
       </div>
     </section>
   );
 }
-
-
 

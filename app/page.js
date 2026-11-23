@@ -1,3 +1,4 @@
+import BgClouds from "@/components/BgClouds";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -12,6 +13,7 @@ import Animations from "@/components/Animations";
 export default function Home() {
   return (
     <div className="page">
+      <BgClouds />
       <Navbar />
       <Hero />
       <Services />

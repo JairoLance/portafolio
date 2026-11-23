@@ -325,3 +325,15 @@ img { max-width: 100%; display: block; }
 .navbar::before { display: none !important; }
 .cloud-svg { position: absolute; z-index: -1; left: -20px; right: -20px; width: calc(100% + 40px); top: -34px; height: calc(100% + 68px); overflow: visible; pointer-events: none; }
 .navbar > :not(.cloud-svg) { position: relative; z-index: 1; }
+
+/* Nubes de fondo */
+.bg-clouds { position: fixed; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.bg-cloud { position: absolute; left: 0; height: auto; fill: #a9b4ff; filter: blur(1.5px); animation: cloud-drift linear infinite; will-change: transform; }
+.bg-cloud g { animation: cloud-bob 9s ease-in-out infinite alternate; }
+@keyframes cloud-drift { from { transform: translateX(-30vw); } to { transform: translateX(110vw); } }
+@keyframes cloud-bob { from { transform: translateY(0); } to { transform: translateY(10px); } }
+@media (prefers-reduced-motion: reduce) { .bg-cloud, .bg-cloud g { animation: none; } .bg-cloud { transform: translateX(20vw); } }
+
+.bg-cloud { filter: blur(2.5px); }
+
+.bg-clouds { z-index: 4; }
